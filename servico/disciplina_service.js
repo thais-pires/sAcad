@@ -8,7 +8,7 @@ class DisciplinaService {
         if (disciplinaPesquisada.length > 0) {
             throw new Error('Disciplina já cadastrada!');
         }
-        const disciplinaNova = new disciplina(nome, codigo);
+        const disciplinaNova = new Disciplina(nome, codigo);
         this.repositorio.inserir(disciplinaNova);
         return disciplinaNova;
     }
